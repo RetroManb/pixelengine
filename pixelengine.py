@@ -4,8 +4,6 @@ from pathlib import Path
 from sys import exit
 from __peFont import glyphs
 
-__icon = pygame.image.load("pixelengine_icon.ico")
-
 ## BASE PROJECT
 ##--------------
 """
@@ -121,7 +119,7 @@ class peSprite():
         self.engine.drawSprite(self.x,self.y,self.sprite,self.direction,self.scale)
 
 class pixelEngineClass():
-    def __init__(self,backgroundColor=0x00,screenWidth=256,screenHeight=192,screenMultiplier=3,framesPerSecond=60,title="Pixel Engine v1"):
+    def __init__(self,backgroundColor=0x00,screenWidth=256,screenHeight=192,screenMultiplier=3,framesPerSecond=60,title="Pixel Engine v1",icon = pygame.image.load("pixelengine_icon.ico")):
         print("Setup and initialization")
         print(screenWidth)
         print(screenHeight)
@@ -147,7 +145,7 @@ class pixelEngineClass():
 
         pygame.init()
         self.screen = pygame.display.set_mode((self.SCREENWIDTH*self.SCREENMULTIPLIER,self.SCREENHEIGHT*self.SCREENMULTIPLIER))
-        self.setIcon(__icon)
+        self.setIcon(icon)
         self.setTitle(title)
         self.clock = pygame.time.Clock()
 
