@@ -4,6 +4,8 @@ from pathlib import Path
 from sys import exit
 from __peFont import glyphs
 
+__icon = pygame.image.load("pixelengine_icon.ico")
+
 ## BASE PROJECT
 ##--------------
 """
@@ -145,6 +147,7 @@ class pixelEngineClass():
 
         pygame.init()
         self.screen = pygame.display.set_mode((self.SCREENWIDTH*self.SCREENMULTIPLIER,self.SCREENHEIGHT*self.SCREENMULTIPLIER))
+        self.setIcon(__icon)
         self.setTitle(title)
         self.clock = pygame.time.Clock()
 
@@ -398,3 +401,6 @@ class pixelEngineClass():
         return pygame.display.get_caption()
     def setTitle(self,name):
         pygame.display.set_caption(name)
+    
+    def setIcon(self,image):
+        pygame.display.set_icon(image)
