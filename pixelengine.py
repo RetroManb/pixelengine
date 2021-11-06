@@ -119,7 +119,7 @@ class peSprite():
         self.engine.drawSprite(self.x,self.y,self.sprite,self.direction,self.scale)
 
 class pixelEngineClass():
-    def __init__(self,backgroundColor=0x00,screenWidth=256,screenHeight=192,screenMultiplier=3,framesPerSecond=60,title="Pixel Engine v1",icon = pygame.image.load("pixelengine_icon.ico")):
+    def __init__(self,backgroundColor=0x00,screenWidth=256,screenHeight=192,screenMultiplier=3,framesPerSecond=60,title="Pixel Engine",icon = pygame.image.load("pixelengine_icon.ico")):
         print("Setup and initialization")
         print(screenWidth)
         print(screenHeight)
